@@ -1,0 +1,87 @@
+.sense-bars { display: flex; flex-direction: column; gap: 10px; }
+.sense-bars.compact { gap: 6px; }
+
+.sense-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sense-emoji { font-size: 1rem; width: 20px; text-align: center; }
+.sense-label { font-size: 0.8rem; color: var(--clr-text-2); width: 42px; flex-shrink: 0; }
+
+.sense-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--clr-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sense-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sense-score {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  width: 28px;
+  text-align: right;
+}
+
+/* Dots */
+.sense-dots { display: flex; gap: 8px; flex-wrap: wrap; }
+.sense-dots--sm .sense-dot-ring { width: 36px; height: 36px; }
+.sense-dots--sm .sense-dot-ring span { font-size: 0.6rem; }
+.sense-dots--md .sense-dot-ring { width: 48px; height: 48px; }
+
+.sense-dot-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.sense-dot-emoji { font-size: 0.85rem; }
+.sense-dot-ring {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.sense-dot-ring svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.sense-dot-ring span {
+  position: relative; z-index: 1;
+  font-size: 0.7rem; font-weight: 700;
+  color: var(--clr-text);
+}
+
+/* Overall */
+.overall-score { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.overall-score.large .score-number { font-size: 3rem; }
+.score-number {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--clr-text);
+  line-height: 1;
+}
+.score-stars { display: flex; gap: 2px; }
+.star { color: var(--clr-border); font-size: 1rem; }
+.star.filled { color: var(--clr-accent-2); }
+.star.half { color: var(--clr-accent-2); opacity: 0.6; }
+.score-count { font-size: 0.75rem; color: var(--clr-text-3); }
+
+/* Input */
+.sense-rating-input { display: flex; flex-direction: column; gap: 14px; }
+.sense-input-row { display: flex; align-items: center; gap: 12px; }
+.sense-input-label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.85rem; color: var(--clr-text-2);
+  width: 70px; flex-shrink: 0;
+}
+.sense-input-stars { display: flex; gap: 4px; }
+.star-btn {
+  font-size: 1.6rem;
+  color: var(--clr-border);
+  transition: color var(--t-fast), transform var(--t-fast);
+  line-height: 1;
+}
+.star-btn.active { color: var(--sense-color); }
+.star-btn:hover { color: var(--sense-color); transform: scale(1.15); }
+.sense-input-val {
+  font-size: 0.8rem; font-weight: 700;
+  margin-left: auto;
+}
